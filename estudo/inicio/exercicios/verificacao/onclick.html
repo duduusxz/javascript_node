@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <link rel="stylesheet" href="onclick.css">
+</head>
+<body>
+    <h1>Faça Login</h1>
+
+    <div class="container">
+        <input type="text" id="um"><br>
+        <input type="text" id="dois"><br>
+        <button type="submit" onclick="verificar()">Enviar</button>
+    </div>
+
+    <script>
+        function verificar(){
+
+            const valorUm = document.getElementById('um').value.trim()
+            const valorDois = document.getElementById('dois').value.trim()
+
+            if(valorUm === "" || valorDois === ""){
+                alert('Preencha ambos os campos')
+            } else if(valorUm == 'Dudu' && valorDois == '1234'){
+                window.location.href = "/nota.html"
+            } else {
+                alert('Não autorizado')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota</title>
+</head>
+<body>
+    <script>
+        let nota  = parseFloat(prompt("Digite a primeira nota"));
+        let nota2 = parseFloat(prompt("Digite a segunda nota"));
+        let nota3 = parseFloat(prompt("Digite a terceira nota"));
+        let nota4 = parseFloat(prompt("Digite a quarta nota"));
+
+        // Verificação de valores inválidos
+        if (nota < 0 || nota > 10) {
+            alert("A primeira nota está inválida: " + nota);
+            window.location.href = "/estudo/inicio/exercicios/onclick.html";
+        } else if (nota2 < 0 || nota2 > 10) {
+            alert("A segunda nota está inválida: " + nota2);
+            window.location.href = "/estudo/inicio/exercicios/onclick.html";
+        } else if (nota3 < 0 || nota3 > 10) {
+            alert("A terceira nota está inválida: " + nota3);
+            window.location.href = "/estudo/inicio/exercicios/onclick.html";
+        } else if (nota4 < 0 || nota4 > 10) {
+            alert("A quarta nota está inválida: " + nota4);
+            window.location.href = "/estudo/inicio/exercicios/onclick.html";
+        } else {
+            const media = (nota + nota2 + nota3 + nota4) / 4;
+
+            if (media >= 7) {
+                alert("Aprovado;\nSua média foi: " + media);
+            } else if (media >= 5) {
+                alert("Recuperação;\nSua média foi: " + media);
+            } else {
+                alert("Reprovado;\nSua média foi: " + media);
+            }
+
+            window.location.href = "/estudo/inicio/exercicios/onclick.html";
+        }
+    </script>
+</body>
+</html>
